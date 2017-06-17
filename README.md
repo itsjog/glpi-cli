@@ -37,49 +37,49 @@ export GLPI_APP_TOKEN=<Your User APP Token>
 * Get all Ticket items
 
 ```shell
-$ glpi-cli --item ticket --command get_all
+glpi-cli --item ticket --command get_all
 ```
 
 * Get an Ticket by ID
 
 ```shell
-$ glpi-cli --item ticket --command get_all --id 10
+glpi-cli --item ticket --command get_all --id 10
 ```
 
 * Get all Knowledge Base Titles - filtered output with json util `jq`
 
 ```shell
-$ glpi-cli --item knowbase --command get_all |jq .[].name
+glpi-cli --item knowbase --command get_all |jq .[].name
 ```
 
 * Get Item deleted flag
 
 ```shell
-$ glpi-cli -i ticket -c get -id 52 |jq .is_deleted
+glpi-cli -i ticket -c get -id 52 |jq .is_deleted
 ```
 
 * Delete Ticket
 
 ```shell
-$ glpi-cli -i ticket -c delete -id 52
+glpi-cli -i ticket -c delete -id 52
 ```
 
 * Update Ticket
 
 ```shell
-$ glpi-cli -i ticket -c update -id 52 -p '{ "status": 5, "impact": 2}'
+glpi-cli -i ticket -c update -id 52 -p '{ "status": 5, "impact": 2}'
 ```
 
 * Update Ticket, forcing
 
 ```shell
-$ glpi-cli -i ticket -c update -id 52 -p '{ "status": 5, "impact": 2}' -f
+glpi-cli -i ticket -c update -id 52 -p '{ "status": 5, "impact": 2}' -f
 ```
 
 * Update Ticket, forcing and verbosiity
 
 ```shell
-$ glpi-cli -i ticket -c update -id 52 -p '{ "status": 5, "impact": 2}' -v -f
+glpi-cli -i ticket -c update -id 52 -p '{ "status": 5, "impact": 2}' -v -f
 ```
 
 ## Get Involved
